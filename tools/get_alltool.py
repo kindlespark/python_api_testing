@@ -1,6 +1,11 @@
 import requests
+from dotenv import load_dotenv
+import os 
 
-URL = "https://simple-tool-rental-api.glitch.me/tools"
+# load environment global constants 
+load_dotenv()
+URL = os.getenv("URL")
+
 
 #function
 def get_all_tool_detail(URL):
